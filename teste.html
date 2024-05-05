@@ -1,0 +1,242 @@
+
+
+    <div data-role="dialog" id="dialogTarefasGerenciarRegistrar" class="padding15" data-close-button="true" data-overlay="true" data-overlay-color="op-dark" data-width="850px" style="max-height: 97%;">
+        <h3><span class="mif-plus"></span> Adicionar Tarefa</h3>
+        <hr class="thin">
+        <!-- Start Accordion -->
+        <div class="accordion" data-role="accordion" data-close-any="true">
+            <!--Start Frame Tarefa -->
+            <div class="frame active">
+                <div class="heading">Dados da tarefa</div>
+                <div class="content">
+                    <form id="frmTarefasGerenciarRegistrar" name="frmTarefasGerenciarRegistrar" action="javascript:void(0)" method="POST" data-on-submit="submitFormTarefasRegistrar" data-role="validator" data-show-required-state="false" data-hint-mode="line" data-hint-background="bg-red" data-hint-color="fg-white" data-hide-error="5000">				
+                        <div class="grid">
+                            <div class="row cell">
+                                <div class="input-control text full-size" data-role="input" >
+                                    <input type="text" id="txtNomeTarefa" name="txtNomeTarefa" maxlength="50" placeholder="Nome da Tarefa*" data-validate-func="required" data-validate-hint="Informe o Nome da Tarefa" />
+                                    <button class="button helper-button clear"><span class="mif-cross"></span></button>
+                                    <span class="input-state-error mif-warning"></span>
+                                    <span class="input-state-success mif-checkmark"></span>
+                                </div>
+                            </div>
+                            <div class="row cell">
+                                <div class="cell">
+                                    <div class="input-control full-size" data-role="select" data-placeholder="Selecione a atividade*" data-allow-clear="true">
+                                        <select id="cboAtividade" name="cboAtividade" class="full-size" data-validate-func="required" data-validate-hint="Selecione a atividade" style="width: 100%">
+                                            <option value="" selected style="display: none;">Atividade*</option>
+                                            <% addOptionSelectTimeSheetAtividade() %>
+                                        </select>
+                                        <span class="input-state-error mif-warning"></span>
+                                        <span class="input-state-success mif-checkmark"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row cell">
+                                <div class="cell">
+                                    <div class="input-control select full-size" data-role="select" data-placeholder="Empresa*" data-allow-clear="true">
+                                        <select name="cboEmpresa" id="cboEmpresa" data-validate-func="required" data-validate-hint="Selecione a empresa" class="full-size" style="width: 100%">
+                                            <option value="" selected style="display: none;">Empresa</option>
+                                            <% addOptionSelectEmpresaAll() %>
+                                        </select>
+                                        <span class="input-state-error mif-warning"></span>
+                                        <span class="input-state-success mif-checkmark"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row cells4">
+                                    <div class="cell colspan3">
+                                        <div class="input-control text full-size" data-role="input" >
+                                            <input type="text" id="txtSolicitante" name="txtSolicitante" maxlength="50" placeholder="Solicitante*" data-validate-func="required" data-validate-hint="Informe o solicitante do serviço" />
+                                            <button class="button helper-button clear"><span class="mif-cross"></span></button>
+                                            <span class="input-state-error mif-warning"></span>
+                                            <span class="input-state-success mif-checkmark"></span>
+                                        </div>
+                                    </div>
+                                    <div class="cell">
+                                        <div class="input-control select full-size" data-role="input">
+                                            <select id="cboOrigem" name="cboOrigem" placeholder="Origem*" data-validate-func="required" data-validate-hint="Selecione a origem da tarefa">
+                                                <option value="" selected style="display: none;">Origem*</option>
+                                                <% addOptionSelectOrigem() %>
+                                            </select>
+                                            <span class="input-state-error mif-warning"></span>
+                                            <span class="input-state-success mif-checkmark"></span>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="row cell">
+                                <div class="input-control full-size" data-role="select" data-placeholder="Responsável*" data-allow-clear="true" data-multiple="true">
+                                    <select id="cboUserAtr" name="cboUserAtr" class="full-size" style="width: 100%;">
+                                        <% addOptionSelectUserGroup() %>
+                                    </select>
+                                    <input type="hidden" name="txtUserAtr" id="txtUserAtr" data-validate-func="required" data-validate-hint="Informe o Responsável do Serviço">
+                                    <span class="input-state-error mif-warning"></span>
+                                    <span class="input-state-success mif-checkmark"></span>
+                                </div>
+                            </div>
+                            <div class="row cell">                                                    
+                                <div class="input-control full-size" data-role="select" data-placeholder="Departamento*" data-allow-clear="true" data-multiple="true">
+                                    <select id="cboDepto" name="cboDepto" class="full-size" style="width: 100%;">
+                                        <option value="0">Todos</option>
+                                        <% addOptionSelectDepartamento() %>
+                                    </select>
+                                    <input type="hidden" name="txtDepto" id="txtDepto" data-validate-func="required" data-validate-hint="Selecione o Departamento Responsável">
+                                    <span class="input-state-error mif-warning"></span>
+                                    <span class="input-state-success mif-checkmark"></span>
+                                </div>
+                            </div>
+                            <div class="row cells4">
+                                <div class="cell colspan2">
+                                    <div class="input-control select full-size" data-role="input">
+                                        <select id="cboBucket" name="cboBucket" data-validate-func="required" data-validate-hint="Selecione o bucket da tarefa">
+                                            <option value="" selected style="display: none;">Bucket*</option>			
+                                        </select>
+                                        <span class="input-state-error mif-warning"></span>
+                                        <span class="input-state-success mif-checkmark"></span>
+                                    </div>
+                                </div>
+                                <div class="cell">
+                                    <div class="input-control select full-size" data-role="input">
+                                        <select id="cboPrioridade" name="cboPrioridade" placeholder="Descrição*" data-validate-func="required" data-validate-hint="Selecione a prioridade da tarefa">
+                                            <option value="" selected style="display: none;">Prioridade*</option>
+                                            <% addOptionSelectPrioridade() %>
+                                        </select>
+                                        <span class="input-state-error mif-warning"></span>
+                                        <span class="input-state-success mif-checkmark"></span>
+                                    </div>
+                                </div>
+                                <div class="cell">
+                                    <div class="input-control select full-size" data-role="input">
+                                        <select id="cboStatus" name="cboStatus" data-validate-func="required" data-validate-hint="Selecione o status da tarefa">
+                                            <option value="" selected style="display: none;">Status*</option>
+                                            <% addOptionSelectTarefasStatus() %>
+                                        </select>
+                                        <span class="input-state-error mif-warning"></span>
+                                        <span class="input-state-success mif-checkmark"></span>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="row cells4">
+                                <div class="cell">
+                                    <label>Data Início</label>
+                                    <div class="input-control text full-size" data-other-days='1' data-locale='pt' data-format="dd/mm/yyyy" data-role="datepicker">
+                                        <input type="text" id="txtDataInicial" name="txtDataInicial" placeholder="Início*" data-validate-func="required" data-validate-hint="Informe a data inicial" >
+                                        <button class="button"><span class="mif-calendar"></span></button>
+                                        <span class="input-state-error mif-warning"></span>
+                                        <span class="input-state-success mif-checkmark"></span>
+                                    </div>
+                                </div>
+                                <div class="cell">
+                                    <label>Hora Início</label>
+                                    <div class="input-control text full-size" data-role="input">
+                                        <input type="time" id="txtHoraInicio" name="txtHoraInicio"  placeholder="Hora inicial*" data-validate-hint="Informe a hora inicial" title="Informe a hora do início da atividade">
+                                        <span class="input-state-error mif-warning"></span>
+                                        <span class="input-state-success mif-checkmark"></span>
+                                    </div>
+                                </div>
+                                <div class="cell">
+                                    <label>Data Término</label>
+                                    <div class="input-control text full-size" data-other-days='1' data-locale='pt' data-format="dd/mm/yyyy" data-role="datepicker">
+                                        <input type="text" id="txtDataFinal" name="txtDataFinal" placeholder="Término*" data-validate-hint="Informe a data final">
+                                        <button class="button"><span class="mif-calendar"></span></button>
+                                        <span class="input-state-error mif-warning"></span>
+                                        <span class="input-state-success mif-checkmark"></span>
+                                    </div>
+                                </div>
+                                <div class="cell">
+                                    <label>Hora Término</label>
+                                    <div class="input-control text full-size" data-role="input">
+                                        <input type="time" id="txtHoraTermino" name="txtHoraTermino" placeholder="Hora final*" data-validate-hint="Informe a hora final" title="Informe a hora do término da atividade">
+                                        <span class="input-state-error mif-warning"></span>
+                                        <span class="input-state-success mif-checkmark"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row cells">
+                                <div class="cell">
+                                    <div class="input-control full-size textarea" data-role="input">
+                                        <textarea id="txtDescricao" name="txtDescricao" class="countChar" maxlength="150" placeholder="Descrição da tarefa" data-validate-func="required" data-validate-hint="Informe a descrição do serviço desejado"></textarea>
+                                        <small id="countChar">150</small>
+                                        <span class="input-state-error mif-warning"></span>
+                                        <span class="input-state-success mif-checkmark"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>  
+            </div>
+            <!-- End- Frame Tarefa -->
+            <!-- Start Frame SubTarefas -->
+            <div class="frame">
+                <div class="heading">Subtarefas</div>
+                <div class="content">
+                    <div class="grid">
+                        <div class="form-actions no-padding-left no-padding-botton">
+                            <form id="frmSubTarefasRegistrar" name="frmSubTarefasRegistrar" action="javascript:void(0)" method="POST" data-on-submit="submitFormSubTarefasRegistrar" data-role="validator" data-show-required-state="false" data-hint-mode="line" data-hint-background="bg-red" data-hint-color="fg-white" data-hide-error="5000">
+                                <div class="row cells6">
+                                    <div class="cell colspan2">
+                                        <div class="input-control text full-size" data-role="input" >
+                                            <input type="text" id="txtNomeSubTarefa" name="txtNomeSubTarefa" maxlength="50" placeholder="Nome da Tarefa*" data-validate-func="required" data-validate-hint="Informe o Nome da Tarefa" />
+                                            <button class="button helper-button clear"><span class="mif-cross"></span></button>
+                                            <span class="input-state-error mif-warning"></span>
+                                            <span class="input-state-success mif-checkmark"></span>
+                                        </div>
+                                    </div>
+                                    <div class="cell colspan2">
+                                        <div class="input-control full-size" data-role="select" data-placeholder="Responsável*" data-allow-clear="true" data-multiple="true">
+                                            <select id="cboSubUserAtr" name="cboSubUserAtr" class="full-size" style="width: 100%;">
+                                                <% addOptionSelectUserGroup() %>
+                                            </select>
+                                            <input type="hidden" name="txtSubUserAtr" id="txtSubUserAtr" data-validate-func="required" data-validate-hint="Informe o Responsável do Serviço">
+                                            <span class="input-state-error mif-warning"></span>
+                                            <span class="input-state-success mif-checkmark"></span>
+                                        </div>
+                                    </div>
+                                    <div class="cell colspan2">
+                                        <div class="input-control select full-size" data-role="input">
+                                            <select id="cboSubStatus" name="cboSubStatus" data-validate-func="required" data-validate-hint="Selecione o status da tarefa">
+                                                <option value="" selected style="display: none;">Status*</option>
+                                                <% addOptionSelectTarefasStatus() %>
+                                            </select>
+                                            <span class="input-state-error mif-warning"></span>
+                                            <span class="input-state-success mif-checkmark"></span>
+                                            <div class="button-group">
+                                                <button type="submit" title="Adicionar item ao processo" id="addSubTarefa" name="addSubTarefa" class="button primary">
+                                                    <span class="mif-plus"></span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </form>
+                            <table class="table striped hovered" id="tableSubTarefas" name="tableSubTarefas">
+                                <thead id="testeTableID">
+                                    <th class="align-left">ID</th>
+                                    <th class="align-left">Sub-Tarefa</th>
+                                    <th class="align-left hidden">Responsável ID</th>
+                                    <th class="align-left">Responsável</th>
+                                    <th class="align-left hidden">Status ID</th>
+                                    <th class="align-left">Status</th>
+                                    <th class="align-center"><span class="mif-cross"></span></th>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Frame SubTarefas -->
+        </div>
+        <!-- End Accordion -->
+                
+        <hr class="thin">
+        <div>
+            <button type="button" class="button success" id="btnTarefasRegistrarGravar" name="btnTarefasRegistrarGravar">
+                <span class="mif-checkmark"></span> Gravar
+            </button>
+            <button type="button" class="button danger" id="btnTarefasRegistrarCancelar" name="btnTarefasRegistrarCancelar">
+                <span class="mif-cross"></span> Cancelar
+            </button>
+        </div>
+    </div>

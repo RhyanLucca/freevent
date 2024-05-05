@@ -1,0 +1,343 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none; 
+    font-family: "Segoe UI Light_", "Open Sans Light", Verdana, Arial, Helvetica, sans-serif;
+}
+
+    a{
+        /* color: #00A2FF; */
+        color: #fff;
+    }   
+
+
+body{
+    background-color: #f2f2f2;
+    /* margin-top: 4rem; */
+    /* background-image: url('images/amor.jpg'); */
+}
+
+.debug{
+    border: 1px solid rgb(202, 95, 95);
+}
+.full-right{
+    justify-content: space-between;
+}
+
+
+.first-link{
+    cursor: pointer;
+}
+
+.first-link:hover{
+    /* transform: scale(1.02);
+    transition: 0.2s; */
+}
+
+
+
+
+/* ##################################################Start Login Div */
+
+    .login-frame{
+        border: 1px solid grey; 
+        border-radius: 0.57em;
+        width: 30%; 
+        margin: 0px auto; 
+        padding: 3%;
+        height: fit-content;
+        background-color: #fff;
+        border: 0.5px solid rgb(190, 190, 190);
+        box-shadow: 3px 3px 3px rgb(190, 190, 190);
+    }
+
+    .login-msg{
+        align-items:center;
+        text-align:center;
+        margin-bottom:32px;
+    }
+
+    .login-error-msg{
+        display: none;
+        padding: 5px;
+        min-height:40px;
+        max-height:40px;
+        border: 1px solid red;
+        border-radius: 7px;
+        background-color: rgba(255, 0, 0, 0.151);
+        align-items: center;
+        color: red;
+    }
+
+/* ##################################################End Login Div */
+
+/* ##################################################Start Nav Div */
+
+    .nav-body{
+        display:flex;
+        height: 65px;
+        align-items: center;
+        text-align: center;
+        background-color: #00A2FF;
+        /* margin-top: 4rem; */
+    }
+
+    .navbar-section{
+        display:flex;
+        height:100%;
+        align-items:center;
+        text-align:center;
+    }
+
+    .title{
+        color: #fff;
+        font-size: 25px;
+    }
+
+    .title span:hover{
+        color: red;
+        transition: 0.3s;
+    }
+
+    .nav-tab{
+        margin-left:auto;
+        margin-right:auto;
+        padding: 7px;
+        color: #fff;
+        border-radius: 7px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 100%;
+    }
+
+    .nav-tab:hover{
+        /* transform: scale(1.05); */
+        background-color: #fff;
+        color: #00A2FF;
+        transition: 0.2s;
+    }
+    
+/* ##################################################End nav div */
+
+    hr{
+        margin: 5px 0 5px 0px;
+    }
+
+    /* .body-area {
+        padding: 10px;
+        min-width: 95%;
+        max-width: 95%;
+        margin: 1rem auto;
+        margin-top:4rem;
+    } */
+
+
+/* ##################################################Start Filter Div */
+
+    .filter-body{
+        background-color: #fff;
+        border: 0.5px solid rgb(190, 190, 190);
+        /* min-width: 100%;
+        max-width: 100%; */
+        margin: 0 auto;
+        margin-bottom: 1rem;
+        border-radius: 7px;
+        box-shadow: 3px 3px 3px rgb(190, 190, 190);
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .submitFormFilter{
+        display: flex;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .filter{
+        margin: 0px 0px 0px 0px;
+        padding: 0.5rem;
+        width: 20%;
+    }
+    
+    .filter-select::after{
+        border: 1px solid red;
+    }
+
+    .filter-button{
+        text-align: center;
+        align-items: center;
+        font-weight: bold;
+        background-color: #00A2FF;
+        color: #fff;
+        border: 1px solid rgb(0, 162, 255);
+        width: 100%;
+        height: 35px;
+        cursor: pointer;
+        border-radius: 7px;
+        font-size: 14px;
+    }
+
+    .filter-button:hover{
+        background-color: rgb(0, 127, 201);
+        color: #fff;
+        border: 1px solid rgb(0, 127, 201);
+        transition: 0.2s;
+    }
+
+    .filter-button:disabled{
+        background-color: rgba(0, 127, 201, 0.527);
+        border: 1px solid rgba(0, 127, 201, 0.425);
+        cursor:not-allowed;
+    }
+
+/* ##################################################End Filter Div */
+
+/* ##################################################Start Publication Div */
+
+    .publications-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .publication-body{
+        /* background-color: #fff;
+        cursor: pointer;
+        /* min-width: 350px;
+        width: 350px;
+        /* max-width: 350px;
+        margin: 1%;
+        padding: 1%;
+        min-height: 235px;
+        max-height: 235px;
+        border: 1px solid rgb(190, 190, 190);
+        box-shadow: 3px 3px 3px rgb(190, 190, 190); */
+        /* border-radius: 7px; */
+    }
+
+    .publication-body:hover{
+        /* transform: scale(1.03);
+        transition: 0.2s;
+        box-shadow: 7px 7px 7px rgb(190, 190, 190); */
+
+    }
+
+    .publication-title{
+        min-height: 10%;
+        max-height: 10%;
+        align-items: center;
+        text-align: center;
+        padding: 1%;
+    }
+
+    .publication-status-active{
+        border:1px solid rgb(0, 161, 0);
+        padding: 5px;
+        background-color:rgb(0, 161, 0);
+        color:#fff;
+    }
+
+    .publication-status-inactive{
+        border:1px solid rgb(161, 0, 0);
+        padding: 5px;
+        background-color:rgb(161, 0, 0);
+        color:#fff;
+    }
+
+    .publication-description{
+        min-height: 45%;
+        max-height: 45%;
+        min-height: 110px;
+        max-height: 110px;
+        padding: 1%;
+        align-items: center;
+    }
+
+    .publication-bonus{
+        min-height: 5%;
+        max-height: 5%;
+        padding: 1%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+/* ##################################################End Publication Div */
+
+.confirm-button{
+    margin-left:200px; 
+    padding:5px; 
+    color:white; 
+    background-color:rgb(0, 170, 0);
+    border: 1px solid rgb(0, 170, 0);
+    border-radius: 7px;
+    padding: 0.7rem;
+    cursor: pointer;
+}
+
+.confirm-button:hover{
+    color:white; 
+    background-color:rgb(2, 119, 2);
+    border: 1px solid rgb(2, 119, 2);
+}
+
+
+
+/* ##################################################Start New Event Div */
+
+.form-input-div{
+    margin: 15px 0 15px 0;
+}
+
+.form-input{
+    align-items: center;
+    /* margin-top:5px; */
+    width: 100%;
+    font-size: 14px;
+    height:35px;
+}
+
+.login-error-msg{
+    display: none;
+    padding: 5px;
+    min-height:40px;
+    max-height:40px;
+    border: 1px solid red;
+    border-radius: 7px;
+    background-color: rgba(255, 0, 0, 0.151);
+    align-items: center;
+    color: red;
+}
+
+.event-tax-msg{
+    max-width:100%;
+    padding: 5px;
+    border: 1px solid #00A2FF;
+    border-radius: 7px;
+    background-color: #aadaf7;
+    align-items: center;
+    color: #00A2FF;
+}
+
+/* ##################################################Start New Event Div */
+
+table{
+    border-collapse: collapse;
+}
+
+thead, th{
+    background-color: #00A2FF;
+    padding: 2%;
+    /* border:1px solid #000; */
+    border-collapse: collapse;
+    color: #fff;
+    /* border-radius: 7px; */
+}
+
+td{
+    padding: 2%;
+    text-align: center;
+    align-items: center;
+    border-bottom: 1px solid #b4b4b4;
+    margin-bottom: 1px;
+}
