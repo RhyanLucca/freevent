@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="" id="form1" name="form1">
+        Nome: <input id="nome" name="nome" type="text">
+        <button type="submit" id="button1" name="button1">
+            enviar
+        </button>
+    </form>
+
+    <script src="script.js"></script>
+    <script>
+
+    function validaNome(nome){
+    // var campo = $('input').val(); // Pega valor do campo
+        nomeSobrenome = /\b[A-Za-zÀ-ú][A-Za-zÀ-ú]+,?\s[A-Za-zÀ-ú][A-Za-zÀ-ú]{2,19}\b/gi;
+        // Regex para duas strings, separadas com espaço e com no mínimo 3 caracteres. Aceita acentuação e rejeita números.
+        
+        // Faz a validacao do regex no campo indicado
+        if(!(nomeSobrenome.test(nome))){
+                console.log('Inválido');      
+            }else{
+                console.log('Válido');
+            }
+    };
+
+    validaNome('Rhyan')
+    validaNome('Rhyan Lucca')
+
+
+
+    // function ValidarEmail (email) {
+    //     var emailPattern =  /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/;
+    //     var teste = emailPattern.test(email);
+    //     if(teste == true){
+    //         return 1
+    //     }else{
+    //         return 0;
+    //     }
+    // }
+    //   console.log('teste');
+    //console.log(ValidarEmail('teste@teste@teste.com'));
+    //console.log(ValidarEmail('teste@teste.com'));
+    // console.log(ValidarEmail('teste@teste@teste.com'));
+    // console.log(ValidarEmail('teste@teste.com'));
+    // var testeteste = ValidarEmail('teste@teste.com');
+
+    // console.log('testeteste ' + testeteste);
+    //console.log(ValidarEmail('teste@.teste.com.br'));
+
+    </script>
+
+</body>
+</html>
