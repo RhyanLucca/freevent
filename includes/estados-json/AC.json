@@ -1,0 +1,29 @@
+{
+    "sigla" : "AC",
+    "nome" : "Acre",
+    "ibge" : 12,
+    "cidades" : [
+        {"uf":"AC","name":"Acrelândia", "ibge":"00013"},
+        {"uf":"AC","name":"Assis Brasil", "ibge":"00054"},
+        {"uf":"AC","name":"Brasiléia", "ibge":"00104"},
+        {"uf":"AC","name":"Bujari", "ibge":"00138"},
+        {"uf":"AC","name":"Capixaba", "ibge":"00179"},
+        {"uf":"AC","name":"Cruzeiro do Sul", "ibge":"00203"},
+        {"uf":"AC","name":"Epitaciolândia", "ibge":"00252"},
+        {"uf":"AC","name":"Feijó", "ibge":"00302"},
+        {"uf":"AC","name":"Jordão", "ibge":"00328"},
+        {"uf":"AC","name":"Mâncio Lima", "ibge":"00336"},
+        {"uf":"AC","name":"Manoel Urbano", "ibge":"00344"},
+        {"uf":"AC","name":"Marechal Thaumaturgo", "ibge":"00351"},
+        {"uf":"AC","name":"Plácido de Castro", "ibge":"00385"},
+        {"uf":"AC","name":"Porto Acre", "ibge":"00807"},
+        {"uf":"AC","name":"Porto Walter", "ibge":"00393"},
+        {"uf":"AC","name":"Rio Branco", "ibge":"00401"},
+        {"uf":"AC","name":"Rodrigues Alves", "ibge":"00427"},
+        {"uf":"AC","name":"Santa Rosa do Purus", "ibge":"00435"},
+        {"uf":"AC","name":"Sena Madureira", "ibge":"00500"},
+        {"uf":"AC","name":"Senador Guiomard", "ibge":"00450"},
+        {"uf":"AC","name":"Tarauacá", "ibge":"00609"},
+        {"uf":"AC","name":"Xapuri", "ibge":"00708"}
+    ]
+}

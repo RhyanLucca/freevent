@@ -1,0 +1,23 @@
+{
+    "sigla": "AP",
+    "nome": "Amapá",
+    "ibge" : 16,
+    "cidades": [
+        {"uf":"AP","name":"Amapá", "ibge":"00105"},
+        {"uf":"AP","name":"Calçoene", "ibge":"00204"},
+        {"uf":"AP","name":"Cutias", "ibge":"00212"},
+        {"uf":"AP","name":"Ferreira Gomes", "ibge":"00238"},
+        {"uf":"AP","name":"Itaubal", "ibge":"00253"},
+        {"uf":"AP","name":"Laranjal do Jari", "ibge":"00279"},
+        {"uf":"AP","name":"Macapá", "ibge":"00303"},
+        {"uf":"AP","name":"Mazagão", "ibge":"00402"},
+        {"uf":"AP","name":"Oiapoque", "ibge":"00501"},
+        {"uf":"AP","name":"Pedra Branca do Amapari", "ibge":"00154"},
+        {"uf":"AP","name":"Porto Grande", "ibge":"00535"},
+        {"uf":"AP","name":"Pracuúba", "ibge":"00550"},
+        {"uf":"AP","name":"Santana", "ibge":"00600"},
+        {"uf":"AP","name":"Serra do Navio", "ibge":"00055"},
+        {"uf":"AP","name":"Tartarugalzinho", "ibge":"00709"},
+        {"uf":"AP","name":"Vitória do Jari", "ibge":"00808"}
+    ]
+}

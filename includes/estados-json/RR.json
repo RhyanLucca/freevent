@@ -1,0 +1,22 @@
+{
+    "sigla": "RR",
+    "nome": "Roraima",
+    "ibge" : 14,
+    "cidades": [
+        {"uf":"RR","name":"Alto Alegre", "ibge":"00050"},
+        {"uf":"RR","name":"Amajari", "ibge":"00027"},
+        {"uf":"RR","name":"Boa Vista", "ibge":"00100"},
+        {"uf":"RR","name":"Bonfim", "ibge":"00159"},
+        {"uf":"RR","name":"Cantá", "ibge":"00175"},
+        {"uf":"RR","name":"Caracaraí", "ibge":"00209"},
+        {"uf":"RR","name":"Caroebe", "ibge":"00233"},
+        {"uf":"RR","name":"Iracema", "ibge":"00282"},
+        {"uf":"RR","name":"Mucajaí", "ibge":"00308"},
+        {"uf":"RR","name":"Normandia", "ibge":"00407"},
+        {"uf":"RR","name":"Pacaraima", "ibge":"00456"},
+        {"uf":"RR","name":"Rorainópolis", "ibge":"00472"},
+        {"uf":"RR","name":"São João da Baliza", "ibge":"00506"},
+        {"uf":"RR","name":"São Luiz", "ibge":"00605"},
+        {"uf":"RR","name":"Uiramutã", "ibge":"00704"}
+    ]
+}
